@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Horoscope & Zodiac Insights — Aura</title>
+  <meta name="description" content="Discover your daily horoscope readings, check sign compatibility, explore cosmic planetary alignments, and access daily spiritual insights tailored for your zodiac sign.">
+  <meta property="og:title" content="Daily Horoscope — Aura">
+  <meta property="og:description" content="Get your daily horoscope, check love & friendship compatibility, and discover planetary alignments.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { midnight: '#0a0e27', cosmic: '#2d1b69', indigo: '#4c1d95', emerald: '#10b981', gold: '#d4a574', 'gold-light': '#f0c987', moonlight: '#c0c0d0', lavender: '#a78bfa' }, fontFamily: { heading: ['Cinzel','serif'], body: ['Inter','sans-serif'], decorative: ['Cinzel Decorative','serif'] } } } }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="page-transition">
+  <div id="scroll-progress"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2 text-xl font-bold" style="font-family: var(--font-heading-decorative); color: var(--mystic-gold); text-decoration: none;">
+          <i class="fas fa-moon text-2xl"></i><span>Aura</span>
+        </a>
+        <nav class="hidden lg:flex items-center gap-6 desktop-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="home2.html" class="nav-link">Home 2</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="horoscope.html" class="nav-link active">Horoscope</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+          <button class="rtl-toggle" aria-label="Toggle RTL"><i class="fas fa-right-left"></i></button>
+          <a href="signup.html" class="btn-primary text-xs !py-2 !px-4 hidden lg:inline-flex">Sign Up</a>
+          <div class="hamburger lg:hidden" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a><a href="home2.html">Home 2</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="horoscope.html">Horoscope</a><a href="contact.html">Contact</a><a href="signup.html">Signup</a>
+    <div class="mt-6 flex gap-3"><button class="theme-toggle"><i class="fas fa-sun"></i></button><button class="rtl-toggle"><i class="fas fa-right-left"></i></button></div>
+  </div>
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <main class="pt-24 min-h-screen">
+    <!-- Hero Section -->
+    <section class="py-12 bg-transparent text-center">
+      <div id="particles-container" style="position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:1;"></div>
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="animate-on-scroll" data-animation="fade-up">
+          <p class="text-sm tracking-widest uppercase mb-2" style="color: var(--mystic-gold);">✦ Cosmic alignment ✦</p>
+          <h1 class="text-4xl sm:text-5xl font-bold mb-4" style="font-family: var(--font-heading);">Daily <span class="gold-text">Horoscopes</span></h1>
+          <p class="section-subtitle">Select your zodiac sign to receive your personalized celestial predictions for today.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horoscope Sign Selector & Display -->
+    <section class="py-10 bg-transparent">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <!-- Sign Selector Panel -->
+          <div class="lg:col-span-1 space-y-4">
+            <div class="glass-card-static p-6">
+              <h3 class="font-bold mb-4" style="font-family: var(--font-heading); color: var(--white);">Choose Your Sign</h3>
+              <div class="grid grid-cols-3 gap-2" id="sign-selector">
+                <button class="zodiac-card !p-3 active" data-sign="aries"><span class="text-xl">♈</span><p class="text-xs">Aries</p></button>
+                <button class="zodiac-card !p-3" data-sign="taurus"><span class="text-xl">♉</span><p class="text-xs">Taurus</p></button>
+                <button class="zodiac-card !p-3" data-sign="gemini"><span class="text-xl">♊</span><p class="text-xs">Gemini</p></button>
+                <button class="zodiac-card !p-3" data-sign="cancer"><span class="text-xl">♋</span><p class="text-xs">Cancer</p></button>
+                <button class="zodiac-card !p-3" data-sign="leo"><span class="text-xl">♌</span><p class="text-xs">Leo</p></button>
+                <button class="zodiac-card !p-3" data-sign="virgo"><span class="text-xl">♍</span><p class="text-xs">Virgo</p></button>
+                <button class="zodiac-card !p-3" data-sign="libra"><span class="text-xl">♎</span><p class="text-xs">Libra</p></button>
+                <button class="zodiac-card !p-3" data-sign="scorpio"><span class="text-xl">♏</span><p class="text-xs">Scorpio</p></button>
+                <button class="zodiac-card !p-3" data-sign="sagittarius"><span class="text-xl">♐</span><p class="text-xs">Sagitt.</p></button>
+                <button class="zodiac-card !p-3" data-sign="capricorn"><span class="text-xl">♑</span><p class="text-xs">Capri.</p></button>
+                <button class="zodiac-card !p-3" data-sign="aquarius"><span class="text-xl">♒</span><p class="text-xs">Aquar.</p></button>
+                <button class="zodiac-card !p-3" data-sign="pisces"><span class="text-xl">♓</span><p class="text-xs">Pisces</p></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Horoscope Display Panel -->
+          <div class="lg:col-span-2">
+            <div class="glass-card-static p-8" id="horoscope-reading-box">
+              <div class="flex items-center gap-4 mb-6">
+                <span class="text-5xl" id="current-sign-emoji" style="color: var(--mystic-gold);">♈</span>
+                <div>
+                  <h2 class="text-3xl font-bold capitalize" id="current-sign-name" style="font-family: var(--font-heading); color: var(--white);">Aries</h2>
+                  <p class="text-sm" id="current-sign-date" style="color: var(--lavender);">March 21 - April 19</p>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-lg font-bold mb-2" style="color: var(--white);"><i class="fas fa-sun mr-2" style="color: var(--mystic-gold);"></i>Today's General Outlook</h3>
+                  <p class="text-sm" id="outlook-text" style="color: var(--moonlight); line-height: 1.7;">
+                    The planetary alignments today boost your energy and confidence, Aries. An exciting connection or sudden creative inspiration could guide your efforts today. Trust your instinct and act decisively.
+                  </p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div class="glass-card-static p-4 text-center">
+                    <h4 class="text-xs font-semibold uppercase mb-1" style="color: var(--lavender);">Love & Relationships</h4>
+                    <span class="text-lg font-bold" style="color: var(--white);">85%</span>
+                  </div>
+                  <div class="glass-card-static p-4 text-center">
+                    <h4 class="text-xs font-semibold uppercase mb-1" style="color: var(--lavender);">Career & Finance</h4>
+                    <span class="text-lg font-bold" style="color: var(--white);">75%</span>
+                  </div>
+                  <div class="glass-card-static p-4 text-center">
+                    <h4 class="text-xs font-semibold uppercase mb-1" style="color: var(--lavender);">Energy Level</h4>
+                    <span class="text-lg font-bold" style="color: var(--white);">90%</span>
+                  </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 pt-4 border-t" style="border-color: var(--glass-border);">
+                  <p class="text-xs"><span class="font-semibold" style="color: var(--mystic-gold);">Lucky Number:</span> <span id="lucky-num">9</span></p>
+                  <p class="text-xs"><span class="font-semibold" style="color: var(--mystic-gold);">Lucky Color:</span> <span id="lucky-color">Crimson Red</span></p>
+                  <p class="text-xs"><span class="font-semibold" style="color: var(--mystic-gold);">Ruling Planet:</span> <span>Mars</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compatibility Section -->
+    <section class="py-12 bg-transparent border-t" style="border-color: var(--glass-border);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10">
+          <h2 class="text-2xl font-bold" style="font-family: var(--font-heading); color: var(--white);">Zodiac Love & Friendship <span class="gold-text">Compatibility</span></h2>
+          <p class="text-sm" style="color: var(--moonlight);">Find out if your stars align with another sign</p>
+        </div>
+        
+        <div class="glass-card-static p-8 max-w-2xl mx-auto text-center">
+          <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-6">
+            <div>
+              <label class="form-label" for="comp-sign-1">Your Sign</label>
+              <select class="form-input !rounded-md" id="comp-sign-1" aria-label="First Sign">
+                <option value="aries">Aries ♈</option>
+                <option value="taurus">Taurus ♉</option>
+                <option value="gemini">Gemini ♊</option>
+                <option value="cancer">Cancer ♋</option>
+                <option value="leo">Leo ♌</option>
+                <option value="virgo">Virgo ♍</option>
+                <option value="libra">Libra ♎</option>
+                <option value="scorpio">Scorpio ♏</option>
+                <option value="sagittarius">Sagittarius ♐</option>
+                <option value="capricorn">Capricorn ♑</option>
+                <option value="aquarius">Aquarius ♒</option>
+                <option value="pisces">Pisces ♓</option>
+              </select>
+            </div>
+            <div class="text-2xl font-bold text-gold" style="color: var(--mystic-gold);"><i class="fas fa-heart animate-pulse"></i></div>
+            <div>
+              <label class="form-label" for="comp-sign-2">Their Sign</label>
+              <select class="form-input !rounded-md" id="comp-sign-2" aria-label="Second Sign">
+                <option value="leo">Leo ♌</option>
+                <option value="aries">Aries ♈</option>
+                <option value="taurus">Taurus ♉</option>
+                <option value="gemini">Gemini ♊</option>
+                <option value="cancer">Cancer ♋</option>
+                <option value="virgo">Virgo ♍</option>
+                <option value="libra">Libra ♎</option>
+                <option value="scorpio">Scorpio ♏</option>
+                <option value="sagittarius">Sagittarius ♐</option>
+                <option value="capricorn">Capricorn ♑</option>
+                <option value="aquarius">Aquarius ♒</option>
+                <option value="pisces">Pisces ♓</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn-primary py-2 px-6" id="check-comp-btn">Calculate Compatibility</button>
+
+          <div class="mt-6 hidden" id="comp-result-box">
+            <h4 class="text-xl font-bold mb-2" style="color: var(--white);">Celestial Match Score</h4>
+            <div class="text-4xl font-extrabold mb-2" style="color: var(--mystic-gold);" id="comp-percent">95%</div>
+            <p class="text-sm max-w-md mx-auto" style="color: var(--moonlight);" id="comp-desc">
+              Excellent! A dynamic pair with vibrant energy and passionate chemistry. Your cosmic bond triggers mutual understanding and growth.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planetary Alignment Section -->
+    <section class="py-12 bg-transparent border-t" style="border-color: var(--glass-border);">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 animate-on-scroll" data-animation="fade-up">
+          <h2 class="text-2xl font-bold" style="font-family: var(--font-heading); color: var(--white);">Current Planetary <span class="gold-text">Positions</span></h2>
+          <p class="text-sm" style="color: var(--moonlight);">Track the cosmic transit movements shaping your reality today</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="glass-card-static p-6 text-center">
+            <div class="text-2xl mb-2">☀️</div>
+            <h4 class="font-bold text-sm" style="color: var(--white);">Sun</h4>
+            <p class="text-xs" style="color: var(--lavender);">Cancer ♋</p>
+            <p class="text-xxs mt-2" style="color: var(--moonlight); opacity: 0.8;">Brings focus to domesticity, emotional health, and family foundations.</p>
+          </div>
+          <div class="glass-card-static p-6 text-center">
+            <div class="text-2xl mb-2">🌙</div>
+            <h4 class="font-bold text-sm" style="color: var(--white);">Moon</h4>
+            <p class="text-xs" style="color: var(--lavender);">Capricorn ♑</p>
+            <p class="text-xxs mt-2" style="color: var(--moonlight); opacity: 0.8;">Instills grounded discipline, practical goals, and structures emotions.</p>
+          </div>
+          <div class="glass-card-static p-6 text-center">
+            <div class="text-2xl mb-2">🪐</div>
+            <h4 class="font-bold text-sm" style="color: var(--white);">Saturn</h4>
+            <p class="text-xs" style="color: var(--lavender);">Pisces ♓ (Retrograde)</p>
+            <p class="text-xxs mt-2" style="color: var(--moonlight); opacity: 0.8;">Signals a period of reflection on spiritual boundaries and healing.</p>
+          </div>
+          <div class="glass-card-static p-6 text-center">
+            <div class="text-2xl mb-2">✨</div>
+            <h4 class="font-bold text-sm" style="color: var(--white);">Mercury</h4>
+            <p class="text-xs" style="color: var(--lavender);">Leo ♌</p>
+            <p class="text-xxs mt-2" style="color: var(--moonlight); opacity: 0.8;">Inspires creative self-expression and bold communication styles.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="site-footer relative py-16">
+    <div class="footer-glow"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- About -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2 text-lg font-bold mb-4" style="font-family: var(--font-heading-decorative); color: var(--mystic-gold); text-decoration: none;">
+            <i class="fas fa-moon"></i> Aura
+          </a>
+          <p class="text-sm mb-4" style="color: var(--moonlight);">Your trusted spiritual companion for tarot readings, astrology, and holistic guidance. Illuminating paths since 2015.</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center text-sm" style="background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--lavender); transition: all 0.3s;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center text-sm" style="background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--lavender); transition: all 0.3s;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center text-sm" style="background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--lavender); transition: all 0.3s;" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center text-sm" style="background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--lavender); transition: all 0.3s;" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-bold mb-4" style="font-family: var(--font-heading); color: var(--mystic-gold);">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Home</a></li>
+            <li><a href="about.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">About Us</a></li>
+            <li><a href="blog.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Blog</a></li>
+            <li><a href="booking.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Book a Session</a></li>
+            <li><a href="contact.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Services -->
+        <div>
+          <h4 class="font-bold mb-4" style="font-family: var(--font-heading); color: var(--mystic-gold);">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="booking.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Tarot Reading</a></li>
+            <li><a href="booking.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Love Guidance</a></li>
+            <li><a href="booking.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Career Guidance</a></li>
+            <li><a href="booking.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Astrology</a></li>
+            <li><a href="booking.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Chakra Healing</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h4 class="font-bold mb-4" style="font-family: var(--font-heading); color: var(--mystic-gold);">Contact Us</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-sm" style="color: var(--moonlight);"><i class="fas fa-map-marker-alt mt-1" style="color: var(--lavender);"></i> 123 Mystic Lane, Crystal City, CA 90210</li>
+            <li class="flex items-center gap-3 text-sm" style="color: var(--moonlight);"><i class="fas fa-phone" style="color: var(--lavender);"></i> +1 (555) TAROT-11</li>
+            <li class="flex items-center gap-3 text-sm" style="color: var(--moonlight);"><i class="fas fa-envelope" style="color: var(--lavender);"></i> hello@celestialtarot.com</li>
+          </ul>
+          <form class="newsletter-form mt-4" id="newsletter-footer">
+            <input type="email" placeholder="Your email" class="!py-2 !text-sm" aria-label="Footer newsletter email">
+            <button type="submit" class="btn-gold !py-2 !text-sm whitespace-nowrap">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="section-divider mb-6"></div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs" style="color: var(--moonlight); opacity: 0.6;">© 2026 Aura. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="text-xs" style="color: var(--moonlight); opacity: 0.6; text-decoration: none;">Privacy Policy</a>
+          <a href="#" class="text-xs" style="color: var(--moonlight); opacity: 0.6; text-decoration: none;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top -->
+  <button id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/forms.js"></script>
+  <script>
+    // Simple interactive horoscope selector logic
+    const signsData = {
+      aries: { emoji: '♈', name: 'Aries', date: 'March 21 - April 19', outlook: 'The planetary alignments today boost your energy and confidence, Aries. An exciting connection or sudden creative inspiration could guide your efforts today. Trust your instinct and act decisively.', love: '85%', career: '75%', energy: '90%', num: 9, color: 'Crimson Red' },
+      taurus: { emoji: '♉', name: 'Taurus', date: 'April 20 - May 20', outlook: 'Take things step by step, Taurus. Venus encourages you to indulge in grounding self-care routines or spend cozy moments with friends. Financial opportunities look stable.', love: '90%', career: '80%', energy: '70%', num: 6, color: 'Forest Green' },
+      gemini: { emoji: '♊', name: 'Gemini', date: 'May 21 - June 20', outlook: 'Your mind is buzzing with ideas, Gemini! Mercury urges you to connect, network, or start a new book. Express your thoughts openly to find hidden solutions.', love: '78%', career: '88%', energy: '85%', num: 5, color: 'Lemon Yellow' },
+      cancer: { emoji: '♋', name: 'Cancer', date: 'June 21 - July 22', outlook: 'The Sun shines bright in your sign. Focus on setting intentions for the year ahead and trust your nurturing nature. A family discussion brings resolution.', love: '95%', career: '70%', energy: '80%', num: 2, color: 'Silver' },
+      leo: { emoji: '♌', name: 'Leo', date: 'July 23 - August 22', outlook: 'Pamper your inner child, Leo. Spend time showcasing your creative talents or planning your next adventure. Your glowing charisma attracts warm vibes.', love: '88%', career: '85%', energy: '95%', num: 1, color: 'Golden Yellow' },
+      virgo: { emoji: '♍', name: 'Virgo', date: 'August 23 - September 22', outlook: 'An excellent day for organization and logical thinking, Virgo. Mercury helps you sort out complex tasks with high precision. Avoid overthinking and relax.', love: '70%', career: '95%', energy: '75%', num: 4, color: 'Royal Blue' },
+      libra: { emoji: '♎', name: 'Libra', date: 'September 23 - October 22', outlook: 'Harmony is your target today. Try balancing professional tasks with romantic relations. An artistic project receives favorable feedback.', love: '92%', career: '80%', energy: '80%', num: 7, color: 'Rose Pink' },
+      scorpio: { emoji: '♏', name: 'Scorpio', date: 'October 23 - November 21', outlook: 'Your intuitive senses are exceptionally sharp today. Pay attention to spiritual signals or dreams. A profound conversation clears path blocks.', love: '85%', career: '75%', energy: '85%', num: 8, color: 'Deep Burgundy' },
+      sagittarius: { emoji: '♐', name: 'Sagittarius', date: 'November 22 - December 21', outlook: 'Cosmic transits spark your wanderlust. Even if you cannot travel far, exploring a new topic or neighborhood will refresh your spirits.', love: '80%', career: '82%', energy: '90%', num: 3, color: 'Purple' },
+      capricorn: { emoji: '♑', name: 'Capricorn', date: 'December 22 - January 19', outlook: 'Responsibility calls, Capricorn, and you are ready. Step up to lead a project or resolve an energetic bottleneck. Saturn supports structure.', love: '75%', career: '90%', energy: '85%', num: 8, color: 'Dark Charcoal' },
+      aquarius: { emoji: '♒', name: 'Aquarius', date: 'January 20 - February 18', outlook: 'Embrace your unique self today. A collaborative project benefits from your innovative ideas. Social activities bring pleasant surprises.', love: '82%', career: '88%', energy: '80%', num: 11, color: 'Turquoise' },
+      pisces: { emoji: '♓', name: 'Pisces', date: 'February 19 - March 20', outlook: 'Let your artistic side flow today, Pisces. A calm meditation or walk near water channels your imaginative spirits. Trust the flow of time.', love: '90%', career: '70%', energy: '75%', num: 7, color: 'Sea Green' }
+    };
+
+    document.querySelectorAll('#sign-selector button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('#sign-selector button').forEach(b => b.classList.remove('active'));
+        button.classList.add('active');
+        
+        const sign = button.dataset.sign;
+        const data = signsData[sign];
+        if (data) {
+          document.getElementById('current-sign-emoji').textContent = data.emoji;
+          document.getElementById('current-sign-name').textContent = data.name;
+          document.getElementById('current-sign-date').textContent = data.date;
+          document.getElementById('outlook-text').textContent = data.outlook;
+          document.getElementById('lucky-num').textContent = data.num;
+          document.getElementById('lucky-color').textContent = data.color;
+          
+          const ratingElements = document.querySelectorAll('#horoscope-reading-box span.font-bold');
+          ratingElements[0].textContent = data.love;
+          ratingElements[1].textContent = data.career;
+          ratingElements[2].textContent = data.energy;
+        }
+      });
+    });
+
+    // Compatibility Calculator logic
+    document.getElementById('check-comp-btn').addEventListener('click', () => {
+      const s1 = document.getElementById('comp-sign-1').value;
+      const s2 = document.getElementById('comp-sign-2').value;
+      
+      let percentage = 50 + Math.floor(Math.random() * 46); // 50% - 95%
+      
+      // Fixed premium profiles based on matches
+      if(s1 === s2) percentage = 98;
+      
+      const descriptions = [
+        "A highly spiritual union that requires patience and deep listening, bringing growth through self-knowledge.",
+        "A balanced alignment bringing stability and mutual trust. Perfect for long-term collaborations and friendships.",
+        "An electric, exciting connection filled with vibrant chemistry. You challenge and inspire each other.",
+        "Stars indicate exceptionally high compatibility! Passionate sparks fly immediately with shared soul goals."
+      ];
+      
+      let desc = descriptions[Math.floor(Math.random() * descriptions.length)];
+      if (percentage > 90) desc = descriptions[3];
+      
+      document.getElementById('comp-percent').textContent = percentage + '%';
+      document.getElementById('comp-desc').textContent = desc;
+      document.getElementById('comp-result-box').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

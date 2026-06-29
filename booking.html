@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Live Session — Celestial Tarot Spiritual Guidance</title>
+  <meta name="description" content="Schedule your live video tarot reading, astrology, chakra alignment, or manifestation coaching session with our certified mystics.">
+  <meta property="og:title" content="Book Live Session — Celestial Tarot">
+  <meta property="og:description" content="Schedule your live video tarot reading or spiritual counseling session instantly.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { colors: { midnight: '#0a0e27', cosmic: '#2d1b69', indigo: '#4c1d95', emerald: '#10b981', gold: '#d4a574', 'gold-light': '#f0c987', moonlight: '#c0c0d0', lavender: '#a78bfa' }, fontFamily: { heading: ['Cinzel','serif'], body: ['Inter','sans-serif'], decorative: ['Cinzel Decorative','serif'] } } } }
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="page-transition">
+  <div id="scroll-progress"></div>
+
+  <!-- Header -->
+  <header class="site-header scrolled" id="site-header">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-2 text-xl font-bold" style="font-family: var(--font-heading-decorative); color: var(--mystic-gold); text-decoration: none;">
+          <i class="fas fa-moon text-2xl"></i><span>Celestial Tarot</span>
+        </a>
+        <nav class="hidden lg:flex items-center gap-6 desktop-nav">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="home2.html" class="nav-link">Home 2</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="blog.html" class="nav-link">Blog</a>
+          <a href="horoscope.html" class="nav-link">Horoscope</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+          <button class="rtl-toggle" aria-label="Toggle RTL"><i class="fas fa-right-left"></i></button>
+          <a href="signup.html" class="btn-primary text-xs !py-2 !px-4 hidden lg:inline-flex">Sign Up</a>
+          <div class="hamburger lg:hidden" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a><a href="home2.html">Home 2</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="login.html">Login</a><a href="signup.html">Signup</a>
+    <div class="mt-6 flex gap-3"><button class="theme-toggle"><i class="fas fa-sun"></i></button><button class="rtl-toggle"><i class="fas fa-right-left"></i></button></div>
+  </div>
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+
+  <main class="pt-32 pb-20 min-h-screen">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" id="booking-container">
+      
+      <!-- Booking Progress Indicators -->
+      <div class="booking-progress animate-on-scroll" data-animation="fade-up">
+        <div class="booking-step-indicator active" id="step-ind-1">
+          <span class="step-number">1</span>
+          <span>Reading</span>
+        </div>
+        <div class="step-connector" id="step-con-1"></div>
+        
+        <div class="booking-step-indicator" id="step-ind-2">
+          <span class="step-number">2</span>
+          <span>Reader</span>
+        </div>
+        <div class="step-connector" id="step-con-2"></div>
+        
+        <div class="booking-step-indicator" id="step-ind-3">
+          <span class="step-number">3</span>
+          <span>Date</span>
+        </div>
+        <div class="step-connector" id="step-con-3"></div>
+        
+        <div class="booking-step-indicator" id="step-ind-4">
+          <span class="step-number">4</span>
+          <span>Time</span>
+        </div>
+        <div class="step-connector" id="step-con-4"></div>
+        
+        <div class="booking-step-indicator" id="step-ind-5">
+          <span class="step-number">5</span>
+          <span>Summary</span>
+        </div>
+        <div class="step-connector" id="step-con-5"></div>
+        
+        <div class="booking-step-indicator" id="step-ind-6">
+          <span class="step-number">6</span>
+          <span>Confirm</span>
+        </div>
+      </div>
+
+      <!-- Main Step Content Container -->
+      <div class="glass-card-static p-8 md:p-12 mb-8 animate-on-scroll" data-animation="fade-up" data-delay="100">
+        <div id="booking-step-content">
+          <!-- Dynamically populated via booking.js -->
+        </div>
+      </div>
+
+      <!-- Step Navigation Buttons -->
+      <div class="flex justify-between items-center animate-on-scroll" data-animation="fade-up" data-delay="200">
+        <button id="booking-prev" class="btn-secondary px-6 py-3 hidden">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+        <div class="ml-auto">
+          <button id="booking-next" class="btn-gold px-8 py-3">
+            Next Step <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- =============== FOOTER =============== -->
+  <footer class="site-footer relative py-16">
+    <div class="footer-glow"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        <!-- About -->
+        <div>
+          <a href="index.html" class="flex items-center gap-2 text-lg font-bold mb-4" style="font-family: var(--font-heading-decorative); color: var(--mystic-gold); text-decoration: none;">
+            <i class="fas fa-moon"></i> Aura
+          </a>
+          <p class="text-sm mb-4" style="color: var(--moonlight);">Your trusted spiritual companion for tarot readings, astrology, and holistic guidance. Illuminating paths since 2015.</p>
+          <div class="flex gap-3">
+            <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center text-sm" style="background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--lavender); transition: all 0.3s;" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center text-sm" style="background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--lavender); transition: all 0.3s;" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center text-sm" style="background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--lavender); transition: all 0.3s;" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full flex items-center justify-center text-sm" style="background: var(--glass-bg); border: 1px solid var(--glass-border); color: var(--lavender); transition: all 0.3s;" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-bold mb-4" style="font-family: var(--font-heading); color: var(--mystic-gold);">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Home</a></li>
+            <li><a href="about.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">About Us</a></li>
+            <li><a href="blog.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Blog</a></li>
+            <li><a href="booking.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Book a Session</a></li>
+            <li><a href="contact.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Contact</a></li>
+          </ul>
+        </div>
+        <!-- Services -->
+        <div>
+          <h4 class="font-bold mb-4" style="font-family: var(--font-heading); color: var(--mystic-gold);">Services</h4>
+          <ul class="space-y-2">
+            <li><a href="booking.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Tarot Reading</a></li>
+            <li><a href="booking.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Love Guidance</a></li>
+            <li><a href="booking.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Career Guidance</a></li>
+            <li><a href="booking.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Astrology</a></li>
+            <li><a href="booking.html" class="text-sm hover:text-gold transition-colors" style="color: var(--moonlight); text-decoration: none;">Chakra Healing</a></li>
+          </ul>
+        </div>
+        <!-- Contact -->
+        <div>
+          <h4 class="font-bold mb-4" style="font-family: var(--font-heading); color: var(--mystic-gold);">Contact Us</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-sm" style="color: var(--moonlight);"><i class="fas fa-map-marker-alt mt-1" style="color: var(--lavender);"></i> 123 Mystic Lane, Crystal City, CA 90210</li>
+            <li class="flex items-center gap-3 text-sm" style="color: var(--moonlight);"><i class="fas fa-phone" style="color: var(--lavender);"></i> +1 (555) TAROT-11</li>
+            <li class="flex items-center gap-3 text-sm" style="color: var(--moonlight);"><i class="fas fa-envelope" style="color: var(--lavender);"></i> hello@celestialtarot.com</li>
+          </ul>
+          <form class="newsletter-form mt-4" id="newsletter-footer">
+            <input type="email" placeholder="Your email" class="!py-2 !text-sm" aria-label="Footer newsletter email">
+            <button type="submit" class="btn-gold !py-2 !text-sm whitespace-nowrap">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="section-divider mb-6"></div>
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs" style="color: var(--moonlight); opacity: 0.6;">© 2026 Aura. All rights reserved.</p>
+        <div class="flex gap-4">
+          <a href="#" class="text-xs" style="color: var(--moonlight); opacity: 0.6; text-decoration: none;">Privacy Policy</a>
+          <a href="#" class="text-xs" style="color: var(--moonlight); opacity: 0.6; text-decoration: none;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll To Top -->
+  <button id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/booking.js"></script>
+</body>
+</html>
