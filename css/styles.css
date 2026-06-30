@@ -864,6 +864,17 @@ section {
   padding: 0 1rem;
 }
 
+.testimonial-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1rem;
+  border: 2px solid var(--mystic-gold);
+  box-shadow: 0 4px 20px rgba(167, 139, 250, 0.25);
+  display: block;
+}
+
 [data-theme="light"] .testimonial-slide p {
   color: #4c1d95 !important;
 }
@@ -952,6 +963,20 @@ section {
   border-radius: var(--radius-lg);
   overflow: hidden;
   transition: all var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.blog-card .p-6 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-card .p-6 .btn-secondary {
+  margin-top: auto;
+  align-self: flex-start;
 }
 
 .blog-card:hover {
@@ -1098,6 +1123,16 @@ section {
   font-size: 0.95rem;
   transition: all var(--transition-normal);
   outline: none;
+}
+
+select.form-input option {
+  background-color: var(--midnight-light);
+  color: var(--white);
+}
+
+[data-theme="light"] select.form-input option {
+  background-color: var(--white);
+  color: #1e1b4b;
 }
 
 .form-input:focus {

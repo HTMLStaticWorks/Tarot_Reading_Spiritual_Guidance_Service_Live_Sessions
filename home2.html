@@ -37,8 +37,6 @@
           <a href="contact.html" class="nav-link">Contact</a>
         </nav>
         <div class="flex items-center gap-3">
-          <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
-          <button class="rtl-toggle" aria-label="Toggle RTL"><i class="fas fa-right-left"></i></button>
           <a href="signup.html" class="btn-primary text-xs !py-2 !px-4 hidden lg:inline-flex">Sign Up</a>
           <div class="hamburger lg:hidden" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></div>
         </div>
@@ -79,41 +77,95 @@
           <p class="section-subtitle">Specialized readings tailored to every area of your life</p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="glass-card p-8 text-center animate-on-scroll" data-animation="fade-up" data-delay="100">
-            <div class="text-4xl mb-4">💕</div>
-            <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Love & Romance</h3>
-            <p class="text-sm mb-4" style="color: var(--moonlight);">Uncover the mysteries of your heart. Understand soulmate connections, twin flames, and romantic futures.</p>
-            <a href="booking.html" class="btn-primary text-sm">Book Now</a>
+          <!-- Love & Romance -->
+          <div class="glass-card overflow-hidden text-center flex flex-col h-full animate-on-scroll" data-animation="fade-up" data-delay="100">
+            <div class="h-48 overflow-hidden w-full relative">
+              <img src="images/cat-love.png" alt="Love & Romance" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Love & Romance</h3>
+                <p class="text-sm mb-4" style="color: var(--moonlight);">Uncover the mysteries of your heart. Understand soulmate connections, twin flames, and romantic futures.</p>
+              </div>
+              <div class="mt-4">
+                <a href="booking.html" class="btn-primary text-sm inline-block">Book Now</a>
+              </div>
+            </div>
           </div>
-          <div class="glass-card p-8 text-center animate-on-scroll" data-animation="fade-up" data-delay="200">
-            <div class="text-4xl mb-4">💼</div>
-            <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Career & Finance</h3>
-            <p class="text-sm mb-4" style="color: var(--moonlight);">Navigate professional decisions with confidence. Discover hidden opportunities and financial insights.</p>
-            <a href="booking.html" class="btn-primary text-sm">Book Now</a>
+          <!-- Career & Finance -->
+          <div class="glass-card overflow-hidden text-center flex flex-col h-full animate-on-scroll" data-animation="fade-up" data-delay="200">
+            <div class="h-48 overflow-hidden w-full relative">
+              <img src="images/cat-career.png" alt="Career & Finance" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Career & Finance</h3>
+                <p class="text-sm mb-4" style="color: var(--moonlight);">Navigate professional decisions with confidence. Discover hidden opportunities and financial insights.</p>
+              </div>
+              <div class="mt-4">
+                <a href="booking.html" class="btn-primary text-sm inline-block">Book Now</a>
+              </div>
+            </div>
           </div>
-          <div class="glass-card p-8 text-center animate-on-scroll" data-animation="fade-up" data-delay="300">
-            <div class="text-4xl mb-4">🌟</div>
-            <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Spiritual Growth</h3>
-            <p class="text-sm mb-4" style="color: var(--moonlight);">Deepen your spiritual practice, connect with higher wisdom, and unlock your soul's true purpose.</p>
-            <a href="booking.html" class="btn-primary text-sm">Book Now</a>
+          <!-- Spiritual Growth -->
+          <div class="glass-card overflow-hidden text-center flex flex-col h-full animate-on-scroll" data-animation="fade-up" data-delay="300">
+            <div class="h-48 overflow-hidden w-full relative">
+              <img src="images/cat-spiritual.png" alt="Spiritual Growth" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Spiritual Growth</h3>
+                <p class="text-sm mb-4" style="color: var(--moonlight);">Deepen your spiritual practice, connect with higher wisdom, and unlock your soul's true purpose.</p>
+              </div>
+              <div class="mt-4">
+                <a href="booking.html" class="btn-primary text-sm inline-block">Book Now</a>
+              </div>
+            </div>
           </div>
-          <div class="glass-card p-8 text-center animate-on-scroll" data-animation="fade-up" data-delay="400">
-            <div class="text-4xl mb-4">🔮</div>
-            <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Past Life Reading</h3>
-            <p class="text-sm mb-4" style="color: var(--moonlight);">Explore your past incarnations and understand how they influence your present journey and karmic patterns.</p>
-            <a href="booking.html" class="btn-primary text-sm">Book Now</a>
+          <!-- Past Life Reading -->
+          <div class="glass-card overflow-hidden text-center flex flex-col h-full animate-on-scroll" data-animation="fade-up" data-delay="400">
+            <div class="h-48 overflow-hidden w-full relative">
+              <img src="images/cat-pastlife.png" alt="Past Life Reading" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Past Life Reading</h3>
+                <p class="text-sm mb-4" style="color: var(--moonlight);">Explore your past incarnations and understand how they influence your present journey and karmic patterns.</p>
+              </div>
+              <div class="mt-4">
+                <a href="booking.html" class="btn-primary text-sm inline-block">Book Now</a>
+              </div>
+            </div>
           </div>
-          <div class="glass-card p-8 text-center animate-on-scroll" data-animation="fade-up" data-delay="500">
-            <div class="text-4xl mb-4">👨‍👩‍👧‍👦</div>
-            <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Family & Home</h3>
-            <p class="text-sm mb-4" style="color: var(--moonlight);">Gain insights into family dynamics, home energy, and the spiritual bonds that connect your loved ones.</p>
-            <a href="booking.html" class="btn-primary text-sm">Book Now</a>
+          <!-- Family & Home -->
+          <div class="glass-card overflow-hidden text-center flex flex-col h-full animate-on-scroll" data-animation="fade-up" data-delay="500">
+            <div class="h-48 overflow-hidden w-full relative">
+              <img src="images/cat-family.png" alt="Family & Home" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Family & Home</h3>
+                <p class="text-sm mb-4" style="color: var(--moonlight);">Gain insights into family dynamics, home energy, and the spiritual bonds that connect your loved ones.</p>
+              </div>
+              <div class="mt-4">
+                <a href="booking.html" class="btn-primary text-sm inline-block">Book Now</a>
+              </div>
+            </div>
           </div>
-          <div class="glass-card p-8 text-center animate-on-scroll" data-animation="fade-up" data-delay="600">
-            <div class="text-4xl mb-4">🧘</div>
-            <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Health & Wellness</h3>
-            <p class="text-sm mb-4" style="color: var(--moonlight);">Understand the energetic aspects of your well-being and receive guidance for holistic health and vitality.</p>
-            <a href="booking.html" class="btn-primary text-sm">Book Now</a>
+          <!-- Health & Wellness -->
+          <div class="glass-card overflow-hidden text-center flex flex-col h-full animate-on-scroll" data-animation="fade-up" data-delay="600">
+            <div class="h-48 overflow-hidden w-full relative">
+              <img src="images/cat-wellness.png" alt="Health & Wellness" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
+            </div>
+            <div class="p-6 flex-1 flex flex-col justify-between">
+              <div>
+                <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Health & Wellness</h3>
+                <p class="text-sm mb-4" style="color: var(--moonlight);">Understand the energetic aspects of your well-being and receive guidance for holistic health and vitality.</p>
+              </div>
+              <div class="mt-4">
+                <a href="booking.html" class="btn-primary text-sm inline-block">Book Now</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -191,23 +243,23 @@
           <p class="section-subtitle">Comprehensive programs designed for deep spiritual transformation and healing</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="glass-card p-8 animate-on-scroll" data-animation="fade-up" data-delay="100">
+          <div class="glass-card p-8 flex flex-col h-full animate-on-scroll" data-animation="fade-up" data-delay="100">
             <div class="text-3xl mb-4" style="color: var(--lavender);"><i class="fas fa-yin-yang"></i></div>
             <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Chakra Alignment</h3>
             <p class="text-sm mb-3" style="color: var(--moonlight);">A 7-session program to balance and activate all your energy centers for optimal well-being and spiritual flow.</p>
-            <p class="text-sm font-semibold" style="color: var(--mystic-gold);">7 Sessions • 8 Weeks</p>
+            <p class="text-sm font-semibold mt-auto" style="color: var(--mystic-gold);">7 Sessions • 8 Weeks</p>
           </div>
-          <div class="glass-card p-8 animate-on-scroll" data-animation="fade-up" data-delay="200">
+          <div class="glass-card p-8 flex flex-col h-full animate-on-scroll" data-animation="fade-up" data-delay="200">
             <div class="text-3xl mb-4" style="color: var(--lavender);"><i class="fas fa-dove"></i></div>
             <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Soul Cleansing</h3>
             <p class="text-sm mb-3" style="color: var(--moonlight);">Release past trauma, negative energy, and karmic debt through guided spiritual cleansing rituals and meditation.</p>
-            <p class="text-sm font-semibold" style="color: var(--mystic-gold);">5 Sessions • 6 Weeks</p>
+            <p class="text-sm font-semibold mt-auto" style="color: var(--mystic-gold);">5 Sessions • 6 Weeks</p>
           </div>
-          <div class="glass-card p-8 animate-on-scroll" data-animation="fade-up" data-delay="300">
+          <div class="glass-card p-8 flex flex-col h-full animate-on-scroll" data-animation="fade-up" data-delay="300">
             <div class="text-3xl mb-4" style="color: var(--lavender);"><i class="fas fa-sun"></i></div>
             <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading); color: var(--white);">Manifestation Mastery</h3>
             <p class="text-sm mb-3" style="color: var(--moonlight);">Learn the art of conscious creation. Master manifestation techniques to attract abundance, love, and purpose.</p>
-            <p class="text-sm font-semibold" style="color: var(--mystic-gold);">10 Sessions • 12 Weeks</p>
+            <p class="text-sm font-semibold mt-auto" style="color: var(--mystic-gold);">10 Sessions • 12 Weeks</p>
           </div>
         </div>
       </div>
@@ -228,7 +280,7 @@
             <div class="star-rating text-lg mb-3">★★★★★</div>
             <p class="text-sm mb-6" style="color: var(--moonlight);">"After my chakra alignment program, I experienced a complete shift in my energy. My chronic anxiety disappeared, and I found a peace I never thought possible. This program literally saved my life."</p>
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold" style="background: var(--gradient-glow); color: white;">EM</div>
+              <img src="images/story-elena.png" alt="Elena Martinez" class="w-10 h-10 rounded-full object-cover">
               <div><p class="font-semibold text-sm" style="color: var(--white);">Elena Martinez</p><p class="text-xs" style="color: var(--lavender);">Chakra Alignment Client</p></div>
             </div>
           </div>
@@ -236,7 +288,7 @@
             <div class="star-rating text-lg mb-3">★★★★★</div>
             <p class="text-sm mb-6" style="color: var(--moonlight);">"The manifestation mastery program exceeded all my expectations. Within three months, I manifested my dream job, repaired a broken relationship, and found my spiritual purpose. Truly life-changing."</p>
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold" style="background: var(--gradient-glow); color: white;">DK</div>
+              <img src="images/story-david.png" alt="David Kim" class="w-10 h-10 rounded-full object-cover">
               <div><p class="font-semibold text-sm" style="color: var(--white);">David Kim</p><p class="text-xs" style="color: var(--lavender);">Manifestation Client</p></div>
             </div>
           </div>
@@ -244,7 +296,7 @@
             <div class="star-rating text-lg mb-3">★★★★★</div>
             <p class="text-sm mb-6" style="color: var(--moonlight);">"My tarot readings have been incredibly accurate and have guided me through the most challenging period of my life. The readers here are genuine, compassionate, and incredibly gifted."</p>
             <div class="flex items-center gap-3">
-              <div class="w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold" style="background: var(--gradient-glow); color: white;">RA</div>
+              <img src="images/story-rachel.png" alt="Rachel Adler" class="w-10 h-10 rounded-full object-cover">
               <div><p class="font-semibold text-sm" style="color: var(--white);">Rachel Adler</p><p class="text-xs" style="color: var(--lavender);">Regular Client</p></div>
             </div>
           </div>
@@ -262,7 +314,7 @@
           <h2 class="section-title">Choose Your <span class="gold-text">Plan</span></h2>
           <p class="section-subtitle">Unlock exclusive benefits with our premium membership tiers</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-md lg:max-w-none mx-auto">
           <!-- Basic -->
           <div class="pricing-card animate-on-scroll" data-animation="fade-up" data-delay="100">
             <div class="text-3xl mb-2">🌙</div>
@@ -270,7 +322,7 @@
             <p class="text-sm mb-4" style="color: var(--moonlight);">Perfect for beginners</p>
             <div class="pricing-amount mb-1">$29</div>
             <p class="text-sm mb-6" style="color: var(--moonlight);">per month</p>
-            <ul class="text-left space-y-3 mb-8">
+            <ul class="inline-block text-left space-y-3 mb-8">
               <li class="flex items-center gap-2 text-sm" style="color: var(--moonlight);"><i class="fas fa-check" style="color: var(--emerald);"></i> 2 Readings per month</li>
               <li class="flex items-center gap-2 text-sm" style="color: var(--moonlight);"><i class="fas fa-check" style="color: var(--emerald);"></i> Weekly horoscope</li>
               <li class="flex items-center gap-2 text-sm" style="color: var(--moonlight);"><i class="fas fa-check" style="color: var(--emerald);"></i> Email support</li>
@@ -288,7 +340,7 @@
             <p class="text-sm mb-4" style="color: var(--moonlight);">For dedicated seekers</p>
             <div class="pricing-amount mb-1">$59</div>
             <p class="text-sm mb-6" style="color: var(--moonlight);">per month</p>
-            <ul class="text-left space-y-3 mb-8">
+            <ul class="inline-block text-left space-y-3 mb-8">
               <li class="flex items-center gap-2 text-sm" style="color: var(--moonlight);"><i class="fas fa-check" style="color: var(--emerald);"></i> 5 Readings per month</li>
               <li class="flex items-center gap-2 text-sm" style="color: var(--moonlight);"><i class="fas fa-check" style="color: var(--emerald);"></i> Daily horoscope</li>
               <li class="flex items-center gap-2 text-sm" style="color: var(--moonlight);"><i class="fas fa-check" style="color: var(--emerald);"></i> Priority support</li>
@@ -305,7 +357,7 @@
             <p class="text-sm mb-4" style="color: var(--moonlight);">The ultimate experience</p>
             <div class="pricing-amount mb-1">$99</div>
             <p class="text-sm mb-6" style="color: var(--moonlight);">per month</p>
-            <ul class="text-left space-y-3 mb-8">
+            <ul class="inline-block text-left space-y-3 mb-8">
               <li class="flex items-center gap-2 text-sm" style="color: var(--moonlight);"><i class="fas fa-check" style="color: var(--emerald);"></i> Unlimited readings</li>
               <li class="flex items-center gap-2 text-sm" style="color: var(--moonlight);"><i class="fas fa-check" style="color: var(--emerald);"></i> Personalized horoscope</li>
               <li class="flex items-center gap-2 text-sm" style="color: var(--moonlight);"><i class="fas fa-check" style="color: var(--emerald);"></i> 24/7 VIP support</li>
@@ -342,8 +394,8 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
         <!-- About -->
         <div>
-          <a href="index.html" class="flex items-center gap-2 text-lg font-bold mb-4" style="font-family: var(--font-heading-decorative); color: var(--mystic-gold); text-decoration: none;">
-            <i class="fas fa-moon"></i> Aura
+          <a href="index.html" class="flex items-center gap-2 text-xl font-bold mb-4" style="font-family: var(--font-heading-decorative); color: var(--mystic-gold); text-decoration: none;">
+            <i class="fas fa-moon text-2xl"></i><span>Aura</span>
           </a>
           <p class="text-sm mb-4" style="color: var(--moonlight);">Your trusted spiritual companion for tarot readings, astrology, and holistic guidance. Illuminating paths since 2015.</p>
           <div class="flex gap-3">

@@ -163,6 +163,7 @@ function initActiveNav() {
   const navLinks = document.querySelectorAll('.nav-link');
 
   navLinks.forEach(link => {
+    link.classList.remove('active');
     const href = link.getAttribute('href');
     if (!href) return;
     const linkPage = href.split('/').pop();
