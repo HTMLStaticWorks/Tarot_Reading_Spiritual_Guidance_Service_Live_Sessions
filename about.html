@@ -28,13 +28,21 @@
           <a href="index.html" class="nav-link">Home</a><a href="home2.html" class="nav-link">Home 2</a><a href="about.html" class="nav-link active">About</a><a href="blog.html" class="nav-link">Blog</a><a href="horoscope.html" class="nav-link">Horoscope</a><a href="contact.html" class="nav-link">Contact</a>
         </nav>
         <div class="flex items-center gap-3">
+          <button class="theme-toggle hidden lg:inline-flex" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+          <button class="rtl-toggle hidden lg:inline-flex" aria-label="Toggle RTL"><i class="fas fa-right-left"></i></button>
           <a href="signup.html" class="btn-primary text-xs !py-2 !px-4 hidden lg:inline-flex">Sign Up</a>
           <div class="hamburger lg:hidden" id="hamburger"><span></span><span></span><span></span></div>
         </div>
       </div>
     </div>
   </header>
-  <div class="mobile-menu" id="mobile-menu"><a href="index.html">Home</a><a href="home2.html">Home 2</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="login.html">Login</a><a href="signup.html">Signup</a><div class="mt-6 flex gap-3"><button class="theme-toggle"><i class="fas fa-sun"></i></button><button class="rtl-toggle"><i class="fas fa-right-left"></i></button></div></div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="index.html">Home</a><a href="home2.html">Home 2</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html">Contact</a><a href="login.html">Login</a><a href="signup.html">Signup</a>
+    <div class="mt-6 flex gap-3">
+      <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-sun"></i></button>
+      <button class="rtl-toggle" aria-label="Toggle RTL"><i class="fas fa-right-left"></i></button>
+    </div>
+  </div>
   <div class="mobile-overlay" id="mobile-overlay"></div>
 
   <main>
