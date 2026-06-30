@@ -160,7 +160,7 @@ function initScrollProgress() {
 /* ---------- Active Navigation ---------- */
 function initActiveNav() {
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-  const navLinks = document.querySelectorAll('.nav-link');
+  const navLinks = document.querySelectorAll('.nav-link, .mobile-menu a');
 
   navLinks.forEach(link => {
     link.classList.remove('active');
