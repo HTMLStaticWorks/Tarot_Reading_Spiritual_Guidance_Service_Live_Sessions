@@ -63,10 +63,15 @@
 [data-theme="light"] {
   --midnight: #f8f6ff;
   --midnight-light: #ede9fe;
-  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-bg: rgba(255, 255, 255, 0.75);
   --glass-border: rgba(139, 92, 246, 0.15);
   --glass-shadow: 0 8px 32px rgba(139, 92, 246, 0.1);
   --gradient-hero: linear-gradient(180deg, #f8f6ff 0%, #ede9fe 40%, #ddd6fe 70%, #f8f6ff 100%);
+  
+  /* Text and element color adjustments for light mode contrast */
+  --white: #1e1b4b;
+  --moonlight: #4c1d95;
+  --lavender: #6d28d9;
 }
 
 [data-theme="light"] body {
@@ -82,19 +87,24 @@
   color: #4c1d95 !important;
 }
 
-[data-theme="light"] .glass-card {
+[data-theme="light"] .glass-card,
+[data-theme="light"] .glass-card-static {
   background: rgba(255, 255, 255, 0.75) !important;
   border-color: rgba(139, 92, 246, 0.2) !important;
   box-shadow: 0 8px 32px rgba(139, 92, 246, 0.08) !important;
 }
 
 [data-theme="light"] .glass-card h3,
-[data-theme="light"] .glass-card h4 {
+[data-theme="light"] .glass-card h4,
+[data-theme="light"] .glass-card-static h3,
+[data-theme="light"] .glass-card-static h4 {
   color: #2d1b69 !important;
 }
 
 [data-theme="light"] .glass-card p,
-[data-theme="light"] .glass-card span {
+[data-theme="light"] .glass-card span,
+[data-theme="light"] .glass-card-static p,
+[data-theme="light"] .glass-card-static span {
   color: #4c1d95 !important;
 }
 
