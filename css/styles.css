@@ -201,6 +201,14 @@
   color: #4c1d95 !important;
 }
 
+.text-mystic-gold {
+  color: var(--mystic-gold) !important;
+}
+
+[data-theme="light"] .text-mystic-gold {
+  color: #92400e !important;
+}
+
 [data-theme="light"] h1,
 [data-theme="light"] h2,
 [data-theme="light"] h3,
