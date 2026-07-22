@@ -250,8 +250,12 @@
 
 [data-theme="light"] .btn-secondary:hover {
   background: #2d1b69 !important;
-  color: var(--white) !important;
   border-color: #2d1b69 !important;
+}
+
+[data-theme="light"] .btn-secondary:hover,
+[data-theme="light"] .btn-secondary:hover * {
+  color: #ffffff !important;
 }
 
 /* ── CTA Button Text: always white in light mode ── */
